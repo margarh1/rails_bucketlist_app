@@ -9,6 +9,31 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Bucket List</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <!-- LOG IN AND SIGN UP -->
+          <button type="button" class="btn btn-success log-in-button navbar-right nav-btn" onclick="location.href='../login'">Log in</button>
+          <button type="button" class="btn btn-success sign-up-button navbar-right nav-btn" onclick="location.href='../signup'">Sign up</button>
+          <form class="navbar-form navbar-right search">
+            <!-- Search form -->
+            <form action="https://localhost:3000" method="GET">
+              <input type="text" name="q" placeholder="search" class="form-control">
+            </form>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
     <%= yield %>
+
+    <div class="container">
+      <footer>
+        <p>&copy; 2016 Margaret Ha and Sol Beniquez @ GA</p>
+      </footer>
+    </div>
   </body>
 </html>
